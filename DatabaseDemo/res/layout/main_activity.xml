@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/btn_addentry"
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/Add_record" />
+
+    <RelativeLayout
+        android:id="@+id/layout_outter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_viewreport"
+        android:layout_below="@+id/btn_addentry"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/layout_add_entry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <EditText
+                android:id="@+id/pt_val1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="10dip"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="@string/ptval1" />
+
+            <EditText
+                android:id="@+id/pt_val2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/pt_val1"
+                android:layout_margin="10dip"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="@string/ptval2" />
+
+            <EditText
+                android:id="@+id/pt_inr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/pt_datetxt"
+                android:layout_margin="10dip"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="@string/inrval" />
+
+            <EditText
+                android:id="@+id/pt_datetxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pt_val2"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dip"
+                android:ems="10"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="@string/select_date"
+                android:inputType="none" />
+
+            <ImageButton
+                android:id="@+id/pt_datebtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/pt_datetxt"
+                android:contentDescription="@string/action_settings"
+                android:src="@android:drawable/ic_menu_my_calendar" />
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/pt_inr"
+                android:text="@string/save" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_view_all"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ListView
+                android:id="@+id/all_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:smoothScrollbar="true"
+                android:visibility="gone" >
+            </ListView>
+
+            <TextView
+                android:id="@+id/no_data_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/NoData"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_viewreport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/view_reports" />
+
+</RelativeLayout>
